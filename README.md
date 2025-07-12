@@ -153,7 +153,7 @@ GlobalAvgPool → Dense(256) → Dense(128) → Dense(3)
 
 ## 👨‍💻 Author
 
-**Eduardo** - Data Scientist & ML Engineer
+**Eduard Giraldo** - Data Scientist & ML Engineer
 
 *Specialized in Computer Vision, Deep Learning, and MLOps*
 
