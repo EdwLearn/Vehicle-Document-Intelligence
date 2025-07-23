@@ -340,9 +340,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact & Support
 
-- **Email**: your.email@domain.com
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/vehicle-document-intelligence/issues)
+- **Email**: your.eduard.trabajo2024@gmail.com.com
+- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/EdwLearn)
+- **Issues**: [GitHub Issues](https://github.com/EdwLearn/vehicle-document-intelligence/issues)
 
 ---
 
