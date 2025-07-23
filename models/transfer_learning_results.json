@@ -1,0 +1,58 @@
+{
+  "experiment_type": "transfer_learning",
+  "timestamp": "2025-07-23T13:50:51.821255",
+  "best_model": {
+    "name": "resnet50v2",
+    "architecture": "Resnet50V2",
+    "test_accuracy": 0.96,
+    "validation_accuracy": 1.0,
+    "total_parameters": 24124163,
+    "training_epochs": 7
+  },
+  "baseline_comparison": {
+    "baseline_accuracy": 0.9178082191780822,
+    "improvement": 0.04219178082191777,
+    "baseline_errors": 6,
+    "current_errors": 2,
+    "error_reduction": 4
+  },
+  "all_models": {
+    "resnet50v2": {
+      "validation_accuracy": 1.0,
+      "total_parameters": 24124163,
+      "training_epochs": 7
+    },
+    "mobilenetv2": {
+      "validation_accuracy": 1.0,
+      "total_parameters": 2620739,
+      "training_epochs": 4
+    }
+  },
+  "error_analysis": {
+    "total_errors": 2,
+    "error_patterns": {
+      "licence \u2192 odometer": 2
+    },
+    "error_indices": [
+      20,
+      41
+    ]
+  },
+  "class_distribution": {
+    "licence": 329,
+    "odometer": 125,
+    "document": 56
+  },
+  "training_config": {
+    "img_size": 224,
+    "batch_size": 16,
+    "initial_epochs": 10,
+    "fine_tune_epochs": 10,
+    "learning_rate": 0.001,
+    "class_weights": {
+      "1": 0.5167173252279635,
+      "2": 1.36,
+      "0": 3.0357142857142856
+    }
+  }
+}

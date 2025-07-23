@@ -1,0 +1,163 @@
+{
+  "analysis_metadata": {
+    "total_test_samples": 73,
+    "current_accuracy": 0.9178082191780822,
+    "total_errors": 6,
+    "analysis_date": "2025-07-23T11:48:24.868143"
+  },
+  "performance_metrics": {
+    "overall_accuracy": 0.9178082191780822,
+    "per_class_metrics": [
+      {
+        "Class": "document",
+        "Support": 8,
+        "Precision": 0.7,
+        "Recall": 0.875,
+        "F1-Score": 0.7777777777777777,
+        "Error_Count": 1
+      },
+      {
+        "Class": "licence",
+        "Support": 47,
+        "Precision": 0.9387755102040817,
+        "Recall": 0.9787234042553191,
+        "F1-Score": 0.9583333333333333,
+        "Error_Count": 1
+      },
+      {
+        "Class": "odometer",
+        "Support": 18,
+        "Precision": 1.0,
+        "Recall": 0.7777777777777778,
+        "F1-Score": 0.8750000000000001,
+        "Error_Count": 4
+      }
+    ],
+    "confusion_matrix": [
+      [
+        7,
+        1,
+        0
+      ],
+      [
+        1,
+        46,
+        0
+      ],
+      [
+        2,
+        2,
+        14
+      ]
+    ]
+  },
+  "error_analysis": {
+    "error_patterns": {
+      "odometer \u2192 licence": 2,
+      "odometer \u2192 document": 2,
+      "document \u2192 licence": 1,
+      "licence \u2192 document": 1
+    },
+    "confidence_analysis": {
+      "error_confidences": {
+        "mean": 0.6159791847070059,
+        "std": 0.15818257362811552,
+        "min": 0.504318356513977,
+        "max": 0.9375671148300171
+      },
+      "correct_confidences": {
+        "mean": 0.83227263724626,
+        "std": 0.1367278723566043,
+        "min": 0.46148085594177246,
+        "max": 0.9904190897941589
+      }
+    }
+  },
+  "recommendations": [
+    "\ud83d\udcc8 MODERATE EFFORT: 6 errors suggest need for better feature learning",
+    "\u26a0\ufe0f CONCERNING: High confidence on errors (overconfident model)",
+    "\ud83d\udcca CLASS FOCUS: 'document' needs most improvement, 'licence' performing best",
+    "\ud83d\udd04 CONFUSION FOCUS: Most common error is 'odometer \u2192 licence'",
+    "\ud83d\udd27 TECHNICAL SUGGESTIONS:",
+    "  \u2022 Add more data augmentation for worst-performing class",
+    "  \u2022 Implement class-specific data augmentation",
+    "  \u2022 Try different loss functions (focal loss for imbalanced classes)",
+    "  \u2022 Experiment with different optimizers (AdamW, RMSprop)",
+    "  \u2022 Implement learning rate scheduling",
+    "  \u2022 Add dropout regularization if overfitting"
+  ],
+  "error_cases": [
+    {
+      "filename": "odometer_0029_enhanced",
+      "true_class": "odometer",
+      "predicted_class": "licence",
+      "confidence": 0.6934330463409424,
+      "is_correct": false,
+      "all_probabilities": [
+        0.030162326991558075,
+        0.6934330463409424,
+        0.2764046788215637
+      ]
+    },
+    {
+      "filename": "odometer_0154_enhanced",
+      "true_class": "odometer",
+      "predicted_class": "document",
+      "confidence": 0.504318356513977,
+      "is_correct": false,
+      "all_probabilities": [
+        0.504318356513977,
+        0.12242434173822403,
+        0.37325727939605713
+      ]
+    },
+    {
+      "filename": "odometer_0127_enhanced",
+      "true_class": "odometer",
+      "predicted_class": "document",
+      "confidence": 0.504318356513977,
+      "is_correct": false,
+      "all_probabilities": [
+        0.504318356513977,
+        0.12242434173822403,
+        0.37325727939605713
+      ]
+    },
+    {
+      "filename": "odometer_0051_enhanced",
+      "true_class": "odometer",
+      "predicted_class": "licence",
+      "confidence": 0.5151306986808777,
+      "is_correct": false,
+      "all_probabilities": [
+        0.03183049336075783,
+        0.5151306986808777,
+        0.4530388116836548
+      ]
+    },
+    {
+      "filename": "document_aug_10_01_rotate_-5_roi",
+      "true_class": "document",
+      "predicted_class": "licence",
+      "confidence": 0.9375671148300171,
+      "is_correct": false,
+      "all_probabilities": [
+        0.023811260238289833,
+        0.9375671148300171,
+        0.03862166032195091
+      ]
+    },
+    {
+      "filename": "plate_0233_enhanced",
+      "true_class": "licence",
+      "predicted_class": "document",
+      "confidence": 0.5411075353622437,
+      "is_correct": false,
+      "all_probabilities": [
+        0.5411075353622437,
+        0.38208791613578796,
+        0.07680454105138779
+      ]
+    }
+  ]
+}

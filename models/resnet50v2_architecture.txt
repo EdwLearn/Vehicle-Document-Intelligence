@@ -1,0 +1,41 @@
+Model: "ResNet50V2_Transfer"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_4 (InputLayer)        [(None, 224, 224, 3)]     0         
+                                                                 
+ random_flip_1 (RandomFlip)  (None, 224, 224, 3)       0         
+                                                                 
+ random_rotation_1 (RandomR  (None, 224, 224, 3)       0         
+ otation)                                                        
+                                                                 
+ random_zoom_1 (RandomZoom)  (None, 224, 224, 3)       0         
+                                                                 
+ random_contrast_1 (RandomC  (None, 224, 224, 3)       0         
+ ontrast)                                                        
+                                                                 
+ resnet50v2 (Functional)     (None, 2048)              23564800  
+                                                                 
+ dropout_3 (Dropout)         (None, 2048)              0         
+                                                                 
+ dense_256 (Dense)           (None, 256)               524544    
+                                                                 
+ bn_256 (BatchNormalization  (None, 256)               1024      
+ )                                                               
+                                                                 
+ dropout_4 (Dropout)         (None, 256)               0         
+                                                                 
+ dense_128 (Dense)           (None, 128)               32896     
+                                                                 
+ bn_128 (BatchNormalization  (None, 128)               512       
+ )                                                               
+                                                                 
+ dropout_5 (Dropout)         (None, 128)               0         
+                                                                 
+ predictions (Dense)         (None, 3)                 387       
+                                                                 
+=================================================================
+Total params: 24124163 (92.03 MB)
+Trainable params: 558595 (2.13 MB)
+Non-trainable params: 23565568 (89.90 MB)
+_________________________________________________________________
